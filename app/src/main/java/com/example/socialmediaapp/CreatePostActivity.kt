@@ -36,10 +36,10 @@ class CreatePostActivity : AppCompatActivity() {
             if(input.isNotEmpty()) {
                 postDao.addPost(input)
 //                finish()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
             }
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
 
     }
